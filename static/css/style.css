@@ -27,6 +27,7 @@ audio:not([controls]) { display: none; }
 
 /*
  * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+
  * 2. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
  */
 
@@ -34,7 +35,7 @@ html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10
 
 html, button, input, select, textarea { font-family: sans-serif; color: #222; }
 
-body { margin: 0; font-size: 1em; line-height: 1.4; }
+body { margin: 0; font-size: 1em; line-height: 1.4; background-color: #EEEEEE ; padding:30px;}
 
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
@@ -226,11 +227,6 @@ td { vertical-align: top; }
 }
 
 
-.sim { 
-font-family: 'Roboto Slab', serif;
-font-weight: 300;
-
-}
 
 .simTitle {
 font-size:24pt;
@@ -238,16 +234,16 @@ font-weight: 400;
 }
 
 .sBlock {
-   min-width:30px;
-/*   padding: 2px;
-   padding-left:4px;
-   padding-right:4px;
-*/   margin: 1px; 
+   background:#FFCCCC;
+   display: inline-block;
+   margin:auto;
 }
 
 /* atom type containers */
-      .simAtoms {
-      width: 98%;
+      .flexline {
+         margin-top: 10px;
+         width: 100%;
+         display:flex;
       }
 
       .simAtomElement {
@@ -267,8 +263,10 @@ font-weight: 400;
 
 
       .simAtomType {
-        background: #DDAAAA;
-        display: block;
+/*        background: #DDAAAA; */
+        width:32px;
+        display: inline-block;
+        margin:auto;
         float: left;
 
       }
@@ -279,34 +277,20 @@ font-weight: 400;
 
 
 .simLocationServer {
-   background: #DDBBBB;
-   float: left;
-   display: block;
+/*   float: left;
+   display: block;  */
    text-align:center;
 
 
  }
 
-.simsteps {
-float: left;
-display: block;
-border: 1px solid black;
-background: #FF0000;
-text-align: center;
-
-
-}
 
 .simLocationPath {
-  background: #DDBBBB;
-  float: left;
+  float:left;
   display: block;
-  max-width:40%;
+  width:80%;
   overflow: hidden;
-
-
 }
-
 
 .simDesc {
    font-weight:300;
@@ -314,24 +298,23 @@ text-align: center;
 
 .filetouch {
    font-size:10px;
-   display: block;
-   float:left;
-   position: relative;
-   bottom: 4px;
-   right: 4px;
-   margin: 4px;
-   margin-left: 50%;
    width: 75%;
    color: #B99;
 
 }
 
+.item:hover {
+   box-shadow: 0px 0px 10px #CCCCCC; 
+}
+
 .item {
-	background: #FFDDDD; 
    padding:10px;
-   min-height: 300px;
+   font-family: 'Roboto Slab', serif;
+   font-weight: 300; 
+   background: #FFDDDD; 
    display: block;
 	float: left;
+   box-shadow: 0px 4px 2px #DDDDDD; 
 	width: 280px;
 	margin: 0 20px 20px 0;
 	-webkit-transition: left .4s ease-in-out, top .4s ease-in-out .4s;
@@ -339,20 +322,6 @@ text-align: center;
 	-ms-transition: left .4s ease-in-out, top .4s ease-in-out .4s;
 	-o-transition: left .4s ease-in-out, top .4s ease-in-out .4s;
 	transition: left .4s ease-in-out, top .4s ease-in-out .4s;
-}
-
-.featured {
-	width: 600px;
-}
-
-.item img {
-	width: 300px;
-	height: auto;
-}
-
-.featured img {
-  width: 620px;
-  height: auto;
 }
 
 /* Titles */
